@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">X.com Profile</string>
+    <string name="follow">Подписаться</string>
+    <string name="message">Сообщение</string>
+    <string name="posts">Посты</string>
+    <string name="followers">Подписчики</string>
+    <string name="following">Подписки</string>
+</resources>
