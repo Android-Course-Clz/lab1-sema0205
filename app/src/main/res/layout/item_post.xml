@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/white">
+
+    <ImageView
+            android:id="@+id/ivPostAuthorAvatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="centerCrop"
+            android:background="@color/cardview_light_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+    <TextView
+            android:id="@+id/tvPostAuthorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ivPostAuthorAvatar"
+            app:layout_constraintTop_toTopOf="@id/ivPostAuthorAvatar"
+            tools:text="Илон Маск" />
+
+    <TextView
+            android:id="@+id/tvPostAuthorNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="#A0A0A0"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvPostAuthorName"
+            app:layout_constraintStart_toEndOf="@id/tvPostAuthorName"
+            app:layout_constraintTop_toTopOf="@id/tvPostAuthorName"
+            tools:text="@elonmusk" />
+
+    <TextView
+            android:id="@+id/tvPostText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvPostAuthorName"
+            app:layout_constraintTop_toBottomOf="@id/tvPostAuthorName"
+            tools:text="Это тестовый пост для демонстрации функциональности приложения." />
+
+    <ImageView
+            android:id="@+id/ivPostImage"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            android:adjustViewBounds="true"
+            android:background="#333333"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvPostText"
+            app:layout_constraintTop_toBottomOf="@id/tvPostText"
+            tools:visibility="visible" />
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvPostText"
+            app:layout_constraintTop_toBottomOf="@id/ivPostImage">
+
+        <LinearLayout
+                android:id="@+id/layoutLike"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp">
+
+            <ImageView
+                    android:id="@+id/ivLike"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_like" />
+
+            <TextView
+                    android:id="@+id/tvLikesCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textColor="#A0A0A0"
+                    android:textSize="14sp"
+                    tools:text="123" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/layoutComment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp">
+
+            <ImageView
+                    android:id="@+id/ivComment"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_comment" />
+
+            <TextView
+                    android:id="@+id/tvCommentsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textColor="#A0A0A0"
+                    android:textSize="14sp"
+                    tools:text="45" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
